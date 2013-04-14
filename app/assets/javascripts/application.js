@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require_self
 //= require_tree .
+
+$(document).ready(function(){
+  $('div.emails a').click(function(){
+    var id = $(this).attr("id");
+    $.get('main/get_messages', { email_id: id });
+  })
+   $(document).on("click","div.email_messages a",function(e){
+     var id = $(this).attr("id");
+     $.get('main/get_message_body', { message_id: id });
+   });
+});

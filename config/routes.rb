@@ -48,7 +48,11 @@ Perepiska::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  match 'main/get_messages' => 'main#get_messages'
+  match 'main/get_message_body' => 'main#get_message_body'
+
+  resource :messages, :only => [:create]
+  root :to => 'main#index'
 
   # See how all your routes lay out with "rake routes"
 

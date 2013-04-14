@@ -1,0 +1,4 @@
+$('div.email_message_body').html(" ")
+                           .append("<%= j render :partial => '/layouts/email_message_body.html.erb', :locals => { :message => @message } %>");
+$('div.email_message_body_control').html(" ")
+                                   .append("<%= j render :partial => '/layouts/email_message_body_control.html.erb', :locals => { :message => @message } %>");

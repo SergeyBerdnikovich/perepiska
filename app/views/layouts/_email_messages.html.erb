@@ -1,0 +1,4 @@
+messages:<br />
+<% messages.each do |message| %>
+  <%= link_to message.subject, '#', :id => message.id %><br />
+<% end %>

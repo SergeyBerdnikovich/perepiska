@@ -1,0 +1,39 @@
+<a href='#' class='btn'>Робо<a>
+<a href='#' class='btn'>Перенаправить<a>
+<a href='#' class='btn'>В архив<a>
+<a href='#' class='btn'>Переместить<a>
+<a href='#' class='btn'>История<a>
+<a href='#' class='btn'>Добавить в ЛП<a>
+<div id="feedbackP">
+  <div id="feedbackButton">
+    Ответить
+  </div>
+  <%= form_for(@new_message) do |f| %>
+    <% if @new_message.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@new_message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+        <ul>
+        <% @new_message.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :subject %><br />
+      <%= f.text_field :subject %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :email_id, :value => message.email.id %>
+    </div>
+    <div class="field">
+      <%= f.label :text %><br />
+      <%= f.text_field :text %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

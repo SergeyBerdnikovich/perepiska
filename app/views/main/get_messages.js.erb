@@ -1,0 +1,2 @@
+$('div.email_messages').html(" ")
+                       .append("<%= j render :partial => '/layouts/email_messages.html.erb', :locals => { :messages => @messages } %>");
