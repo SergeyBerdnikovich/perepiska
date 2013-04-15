@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :init_layout
 
   def init_layout
-    @emails = Email.all
+    @emails_for_menu = Email.all
     @new_message = Message.new
   end
 end

@@ -1,4 +1,9 @@
 Perepiska::Application.routes.draw do
+  root :to => 'main#index'
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,7 +57,7 @@ Perepiska::Application.routes.draw do
   match 'main/get_message_body' => 'main#get_message_body'
 
   resource :messages, :only => [:create]
-  root :to => 'main#index'
+
 
   # See how all your routes lay out with "rake routes"
 

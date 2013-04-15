@@ -91,6 +91,12 @@ div.maket_right_bottom {
     -ms-transition:margin 0.3s linear;
     transition:margin 0.3s linear;
 }
+#feedbackP textarea {
+  width: 98%;
+}
+#feedbackP input#message_subject {
+  width: 98%;
+}
 #feedbackP:hover{
     /* выдвигаем панель на всеобщее обозрение: */
     margin-top : -272px;
