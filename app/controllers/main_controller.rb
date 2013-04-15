@@ -14,4 +14,10 @@ class MainController < ApplicationController
 
     render 'get_message_body.js.erb'
   end
+
+  def get_admin_panel
+    @admin_panel = AdminPanel.find(params[:admin_panel_id])
+
+    render 'get_admin_panel.js.erb'
+  end
 end

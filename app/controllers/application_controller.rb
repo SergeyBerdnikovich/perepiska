@@ -6,5 +6,6 @@ class ApplicationController < ActionController::Base
   def init_layout
     @emails_for_menu = Email.all
     @new_message = Message.new
+    @admin_panel_for_menu = AdminPanel.all
   end
 end

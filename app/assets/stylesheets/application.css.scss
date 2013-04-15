@@ -67,7 +67,9 @@ div.maket_right_top {
 div.maket_right_bottom {
   height: 90%;
 }
-
+div.admin_panel_body {
+  height: 100%;
+}
 #feedbackP{
     width : 38%;
     height : 272px;
@@ -81,7 +83,7 @@ div.maket_right_bottom {
 
     border : 2px solid;
     border-radius: 10px;
-
+    background : #fff;
     padding: 5px;
 
     /*задаем эффект движения: */
