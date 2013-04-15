@@ -1,3 +1,4 @@
 <% @emails_for_menu.each do |email| %>
-  <%= link_to email.email, '#', :id => email.id %><br />
+  <!-- <%= link_to email.email, '#', :id => email.id %><br /> -->
+  <%= link_to email.email, main_get_messages_path(:email_id => email.id), :remote => true %><br />
 <% end %>

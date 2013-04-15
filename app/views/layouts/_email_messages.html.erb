@@ -1,4 +1,5 @@
 messages:<br />
 <% messages.each do |message| %>
-  <%= link_to message.subject, '#', :id => message.id %><br />
+  <!-- <%= link_to message.subject, '#', :id => message.id %><br /> -->
+  <%= link_to message.subject, main_get_message_body_path(:message_id => message.id), :remote => true %><br />
 <% end %>

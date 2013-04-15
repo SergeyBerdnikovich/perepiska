@@ -1,3 +1,4 @@
 <% @admin_panel_for_menu.each_with_index do |admin_panel, i| %>
-  <a href='#' class='btn' id="<%= i+1 %>"><%= admin_panel.button_title %></a>
+  <%= link_to admin_panel.button_title, main_get_admin_panel_path(:admin_panel_id => admin_panel.id ), :class => 'btn', :remote => true %>
+  <!-- <a href='#' class='btn' id="<%= i+1 %>"><%= admin_panel.button_title %></a> -->
 <% end %>
