@@ -1,5 +1,4 @@
-messages:<br />
-<% messages.each do |message| %>
+<% @messages.each do |message| %>
   <%= message.created_at.strftime("%m-%d %H:%M") %>
   <%= link_to message.subject, main_get_message_body_path(:message_id => message.id), :remote => true %><br />
 <% end %>

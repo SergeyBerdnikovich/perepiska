@@ -1,5 +1,11 @@
-message from: <%= message.email_from %> <br />
-subject: <%= message.subject %><br />
-<%= message.created_at %> : <%= message.text %><br />
+<div class='email_message_body_head'>
+  <span class="label label-info">От:</span> <%= message.email_from %>
+  <span class="label label-info">Кому:</span> <%= message.email.email %>
+  <br />
+  <h4 align='left'><span class="label label-info">subject:</span> <%= message.subject %></h4><br />
+  <span class="label label-info">Дата:</span><%= message.created_at.strftime("%m-%d %H:%M") %><br />
+</div>
+<hr />
+<%= message.text %><br />
 
 

@@ -7,41 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="maket">
-    <div class="maket_left">
-      <div class="maket_left_top">
-        <div class='emails'>
-          <%= render 'layouts/emails' %>
-        </div>
-      </div>
-      <div class="maket_left_bottom">
-        <div class='email_messages'>
-        </div>
-      </div>
-    </div>
-
-    <div class="maket_center">
-      <div class="maket_center_top">
-        <div class='email_message_body'>
-        </div>
-      </div>
-      <div class="maket_center_bottom">
-        <div class='email_message_body_control'>
-        </div>
-      </div>
-    </div>
-
-    <div class="maket_right">
-      <div class="maket_right_top">
-        <div class='admin_panel'>
-          <%= render 'layouts/admin_head' %>
-        </div>
-      </div>
-      <div class="maket_right_bottom">
-        <div class='admin_panel_body'>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= yield %>
 </body>
 </html>
